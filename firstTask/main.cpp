@@ -6,9 +6,9 @@
 template<typename T>
 concept firstTaskable = std::same_as<T, Figure> || std::same_as<T, Triangle> || std::same_as<T, QuadAngle>;
 
-void to_string(firstTaskable auto type_object) {
+void to_string(firstTaskable auto const &type_object) {
     std::cout << type_object.get_name() << ": " << type_object.get_side_count() << std::endl;
-};
+}
 
 int main() {
     Figure figure{};
