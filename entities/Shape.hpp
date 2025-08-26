@@ -7,9 +7,12 @@
 #include <vector>
 
 class Shape {
+public:
+    virtual ~Shape() = default;
+
 protected:
     std::string name;
-    int side_count;
+    int side_count = 0;
 
     [[nodiscard]] virtual std::string get_name() const = 0;
 
