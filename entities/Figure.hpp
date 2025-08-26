@@ -7,14 +7,13 @@
  * Unknown figure / interface to shapes.
  */
 class Figure : Shape {
-private:
     std::string name = "Фигура";
     int side_count = 0;
 
 public:
     Figure() = default;
 
-    virtual ~Figure() = default;
+    ~Figure() override = default;
 
     [[nodiscard]] virtual bool self_check() const;
 
